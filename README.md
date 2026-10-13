@@ -1,10 +1,10 @@
-# ADHD Life Manager — V0.1.0
+# ADHD Life Manager — V0.1.1
 
 SwiftUI iPhone/iPad app prototype designed to be opened in Swift Playground on iPad.
 
 ## Open on your iPad
 
-1. Download **LifeManager-v0.1.0.zip** to the **Files** app on your iPad.
+1. Download **LifeManager-v0.1.1-iPad.zip** to the **Files** app on your iPad.
 2. Tap the ZIP to expand it. Inside is an app project named **LifeManager.swiftpm**.
 3. Open the **Swift Playground** app, choose **Browse**, and find **LifeManager.swiftpm** in Files. Open it and tap **Run**. If Files offers **Open in Swift Playground**, that also works.
 4. If the app displays a build error, send the exact first error (or a screenshot). You do **not** need to edit the source files yourself.
@@ -52,3 +52,7 @@ Apple Watch notification mirroring is paired to the **iPhone**, not to the iPad.
 ## Development isolation
 
 This package is intentionally independent of Axik AI Weave, BuildAxis, Arbiter/Forge, Atlas, OpenStorage, and all existing production DigitalOcean services.
+
+## Device build fix in V0.1.1
+
+Updated three Settings form sections to the explicit `Section { ... } header: { Text(...) } footer: { ... }` form accepted by SwiftUI. Updated the `scenePhase` `.onChange` handler to its iOS 17 two-parameter form. These repairs address the actual compiler diagnostics captured on an iPad in V0.1.0. The V0.1.1 app still requires on-device recompilation and notification acceptance testing.

@@ -14,4 +14,4 @@
 - [ ] Denied notifications produce a clear message while preserving task state.
 - [ ] On iPhone installation, test mirrored Apple Watch notification separately.
 
-**Outcome:** Pending iPad device test. Core smoke tests and Swift parser passed on Linux.
+**Outcome:** V0.1.0 first iPad build failed on Settings `Section` initializer inference. Fixed in V0.1.1, pending recompilation on iPad. Core smoke tests and Swift parser passed on Linux.

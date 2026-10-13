@@ -534,15 +534,17 @@ private struct SettingsView: View {
     var body: some View {
         NavigationStack {
             Form {
-                Section("Operating mode") {
+                Section {
                     LabeledContent("Mode", value: "Local demonstration")
                     Label("No cloud connection, microphone, or AI required", systemImage: "iphone")
                         .font(.subheadline)
+                } header: {
+                    Text("Operating mode")
                 } footer: {
                     Text("Only local mode is implemented in version 0.1. No information is transmitted to a server.")
                 }
 
-                Section("Prompts") {
+                Section {
                     LabeledContent("Notifications", value: store.notificationPermission)
                     Button("Request notification permission") {
                         store.askForNotificationPermission()
@@ -555,6 +557,8 @@ private struct SettingsView: View {
                     Button("Try a reminder in 25 seconds") {
                         store.scheduleSamplePrompt()
                     }
+                } header: {
+                    Text("Prompts")
                 } footer: {
                     Text("The sample reminder contains I did it, Snooze, and Skip actions. Delivery when the app is closed must be tested on your device.")
                 }
@@ -574,19 +578,21 @@ private struct SettingsView: View {
                     Toggle("Play notification sound", isOn: soundBinding)
                 }
 
-                Section("Future backend (inactive)") {
+                Section {
                     TextField("https://your-server.example", text: backendBinding)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                         .keyboardType(.URL)
                         .textContentType(.URL)
                     LabeledContent("Connection", value: "Not connected")
+                } header: {
+                    Text("Future backend (inactive)")
                 } footer: {
                     Text("This address is stored on-device only. V0.1 never contacts it; don't enter passwords or API tokens.")
                 }
 
                 Section {
-                    LabeledContent("App version", value: "0.1.0")
+                    LabeledContent("App version", value: "0.1.1")
                     LabeledContent("Open loops", value: "\(store.unresolved.count)")
                     LabeledContent("Verified complete", value: "\(store.completedCount)")
                 }

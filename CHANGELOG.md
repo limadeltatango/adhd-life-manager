@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-10-12
+
+- Fixed three SwiftUI Settings `Section` header/footer initializer errors reported by Swift Playgrounds on iPad.
+- Replaced the deprecated one-parameter scene phase `.onChange` closure with the iOS 17+ two-parameter form.
+- Incremented app display/build version (0.1.1 / 2) and refreshed device acceptance notes.
+- Device compilation still requires a fresh iPad test; Linux Swift cannot compile SwiftUI.
+
 ## 0.1.0 — 2026-10-12
 
 - Created standalone Swift Playground iOS application manifest.

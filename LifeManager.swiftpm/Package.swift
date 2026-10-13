@@ -13,8 +13,8 @@ let package = Package(
             name: "Life Manager",
             targets: ["AppModule"],
             bundleIdentifier: "com.limadeltatango.lifemanager",
-            displayVersion: "0.1.0",
-            bundleVersion: "1",
+            displayVersion: "0.1.1",
+            bundleVersion: "2",
             appIcon: .placeholder(icon: .checkmark),
             accentColor: .presetColor(.teal),
             supportedDeviceFamilies: [

@@ -17,7 +17,7 @@ struct LifeManagerApp: App {
             LifeManagerRootView()
                 .environmentObject(store)
                 .onAppear { store.bootIfNeeded() }
-                .onChange(of: scenePhase) { phase in
+                .onChange(of: scenePhase) { _, phase in
                     if phase == .active { store.reloadFromDisk() }
                 }
         }
